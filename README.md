@@ -15,6 +15,10 @@
   <img src="https://img.shields.io/badge/licença-MIT-cc0000?style=for-the-badge" alt="MIT"/>
 </p>
 
+<p align="center">
+  <a href="https://huggingface.co/brunuu/PequeninaLM"><img src="https://img.shields.io/badge/🤗_Hugging_Face-brunuu%2FPequeninaLM-ffcc4d?style=for-the-badge" alt="Hugging Face"/></a>
+</p>
+
 <br/>
 
 ## O que é
@@ -39,6 +43,20 @@ Abre um dos ficheiros da pasta `gguf/` no LM Studio, ou corre no llama.cpp:
 llama-cli -m gguf/pequeninalm-f16.gguf
 ```
 
+Ou em Python, com o modelo do [Hugging Face](https://huggingface.co/brunuu/PequeninaLM):
+
+```python
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+tok = AutoTokenizer.from_pretrained("brunuu/PequeninaLM")
+model = AutoModelForCausalLM.from_pretrained("brunuu/PequeninaLM")
+
+msgs = [{"role": "user", "content": "Olá! Quem és tu?"}]
+ids = tok.apply_chat_template(msgs, return_tensors="pt", add_generation_prompt=True)
+out = model.generate(ids, max_new_tokens=100, do_sample=True, temperature=0.7, top_p=0.9)
+print(tok.decode(out[0, ids.shape[1]:], skip_special_tokens=True))
+```
+
 <br/>
 
 ## O que vem no repositório
@@ -50,14 +68,27 @@ llama-cli -m gguf/pequeninalm-f16.gguf
 ├── prompts/
 │   ├── conversas_curtas.md          prompt para as conversas de uma volta
 │   └── conversas_longas.md          prompt para as conversas longas, identidade e desabafos
-├── src/
-│   ├── Criar_PequeninaLM.py         corre as fases todas por ordem
-│   ├── tokenizer.py                 treina o tokenizer e tokeniza o corpus
-│   ├── pretreino.py                 pré-treino do modelo base
-│   └── sft.py                       ensina o modelo a conversar
-├── requirements.txt                 dependências para o PC (PyTorch com ROCm, placas AMD)
-└── requirements-runpod.txt          dependências para o RunPod (PyTorch com CUDA, placas NVIDIA)
+└── src/
+    ├── Criar_PequeninaLM.py         corre as fases todas por ordem
+    ├── tokenizer.py                 treina o tokenizer e tokeniza o corpus
+    ├── pretreino.py                 pré-treino do modelo base
+    └── sft.py                       ensina o modelo a conversar
 ```
+
+<br/>
+
+## Destilação com DeepSeek
+
+Depois do pré-treino, o modelo só sabe continuar texto. Para aprender a conversar tem de ver muitos exemplos de perguntas e respostas, e há poucas conversas escritas em português de Portugal. A maioria está em português do Brasil ou foi traduzida do inglês.
+
+Por isso pedi ao DeepSeek que as escrevesse, e os prompts da pasta `prompts/` são as instruções que lhe dei.
+
+Isto é destilação. Um modelo grande, o professor, escreve as respostas e o modelo pequeno, o aluno, aprende a imitá-las. Neste caso o professor é o DeepSeek e a aluna é a PequeninaLM, que treina com as 80 mil conversas que ele escreveu. Não vê os pesos nem as probabilidades do DeepSeek, só o texto final.
+
+Os prompts foram escritos a pensar no tamanho do modelo. Um modelo com 52 milhões de parâmetros aprende sobretudo padrões e, se muitas respostas começarem com «Boa pergunta», passa a dizer «Boa pergunta» a tudo. Os prompts pedem respostas curtas que respondem logo na primeira frase, em português de Portugal e sem frases feitas. Dizem também ao DeepSeek quem é a PequeninaLM, para ela saber o seu nome e não se apresentar como outro modelo.
+
+- `conversas_curtas.md` dá origem a conversas de uma volta: cumprimentos, factos, definições, conselhos, opiniões, dúvidas de português de Portugal, perguntas a que o modelo não pode responder e pedidos que deve recusar.
+- `conversas_longas.md` segue as mesmas regras e acrescenta conversas de 3 ou 4 voltas em que o utilizador volta ao que já disse, perguntas sobre a identidade do modelo a meio da conversa e desabafos.
 
 <br/>
 
