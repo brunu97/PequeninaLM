@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+dados/
+dados_ptpt/
+dados_sft/
+modelos/
+tokenizer/
+*.bin
+*.log
+checkpoint-*/
