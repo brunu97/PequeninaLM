@@ -36,6 +36,28 @@ Aqui está o código para a treinar, os prompts usados para gerar as conversas e
 
 <br/>
 
+## Benchmark PT-PT
+
+<p align="center">
+  <img src="benchmark-ptpt.svg" alt="Benchmark PT-PT" width="720"/>
+</p>
+
+Benchmark de português de Portugal do [AMALIA](https://huggingface.co/datasets/amalia-llm/pt_text_completion). Os valores dos outros modelos são os publicados no [relatório técnico do AMALIA](https://arxiv.org/abs/2603.26511).
+
+<p align="center">
+  <img src="benchmark-p3b3.svg" alt="P3B3" width="720"/>
+</p>
+
+Benchmark [P3B3](https://github.com/AMALIA-LLM/p3b3-benchmark), que mede em que variante do português o modelo responde numa conversa. Os valores dos outros modelos são os publicados no [artigo do P3B3](https://arxiv.org/abs/2606.16753).
+
+<p align="center">
+  <img src="benchmark-2d.svg" alt="PT-PT e raciocínio" width="720"/>
+</p>
+
+O P3B3 ao lado do [PiQA](https://huggingface.co/datasets/amalia-llm/piqa-mt-pt), que mede raciocínio do dia a dia.
+
+<br/>
+
 ## Experimentar
 
 A forma mais rápida é no [Space do Hugging Face](https://huggingface.co/spaces/brunuu/PequeninaLM), que corre no browser sem instalar nada.

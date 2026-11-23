@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="588" viewBox="0 0 720 588" role="img" aria-labelledby="titulo descricao">
+<style>
+  .fundo { fill: #fcfcfb; stroke: #e1e0d9; stroke-width: 1; }
+  .titulo { font: 600 18px system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #0b0b0b; }
+  .seccao { font: 600 14px system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #0b0b0b; }
+  .subtitulo { font: 400 13px system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #52514e; }
+  .nome { font: 400 13px system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #52514e; }
+  .nome.nosso { font-weight: 600; fill: #0b0b0b; }
+  .valor { font: 400 12px system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #52514e; font-variant-numeric: tabular-nums; }
+  .valor.nosso { font-weight: 600; fill: #0b0b0b; }
+  .eixo { font: 400 11px system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #898781; }
+  .grelha { stroke: #e1e0d9; stroke-width: 1; }
+  .barra { fill: #c8c7c0; }
+  .barra.nosso { fill: #2a78d6; }
+  .ponto { fill: #898781; stroke: #fcfcfb; stroke-width: 2; }
+  .ponto.nosso { fill: #2a78d6; }
+  .rotulo { font: 400 12px system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #52514e; }
+  .rotulo.nosso { font-weight: 600; font-size: 13px; fill: #0b0b0b; }
+  @media (prefers-color-scheme: dark) {
+    .fundo { fill: #1a1a19; stroke: #2c2c2a; }
+    .titulo, .seccao, .nome.nosso, .valor.nosso, .rotulo.nosso { fill: #f0efec; }
+    .subtitulo, .nome, .valor, .rotulo { fill: #c3c2b7; }
+    .grelha { stroke: #2c2c2a; }
+    .barra { fill: #4a4a46; }
+    .barra.nosso, .ponto.nosso { fill: #3987e5; }
+    .ponto { stroke: #1a1a19; }
+  }
+</style>
+<title id="titulo">Benchmark PT-PT</title>
+<desc id="descricao">AMALIA-9B-SFT: 71.4%; AMALIA-9B-DPO: 67.1%; EuroLLM-9B: 58.6%; PequeninaLM-50M: 50.0%; Salamandra-7B: 44.3%; Apertus-8B: 40.0%; Qwen 2.5-7B: 40.0%; Ministral-8B: 40.0%; Llama 3.1-8B: 38.6%; Gemma 2-9B: 34.3%; Mistral-7B: 34.3%; OLMo 2-7B: 32.9%; Gervasio-8B: 30.0%; Qwen 3-8B: 28.6%; Gemma 3-12B: 21.4%</desc>
+<rect class="fundo" x="0.5" y="0.5" width="719" height="587" rx="12"/>
+<text class="titulo" x="24" y="34">Benchmark PT-PT</text>
+<text class="subtitulo" x="24" y="54">PT-C do AMALIA · respostas em português de Portugal</text>
+<text class="seccao" x="24" y="92">Escolha múltipla</text>
+<text class="subtitulo" x="24" y="111">formato do AMALIA, os outros modelos são os valores publicados</text>
+<line class="grelha" x1="174.0" y1="124" x2="174.0" y2="548"/>
+<text class="eixo" x="174.0" y="566" text-anchor="middle">0%</text>
+<line class="grelha" x1="291.5" y1="124" x2="291.5" y2="548"/>
+<text class="eixo" x="291.5" y="566" text-anchor="middle">25%</text>
+<line class="grelha" x1="409.0" y1="124" x2="409.0" y2="548"/>
+<text class="eixo" x="409.0" y="566" text-anchor="middle">50%</text>
+<line class="grelha" x1="526.5" y1="124" x2="526.5" y2="548"/>
+<text class="eixo" x="526.5" y="566" text-anchor="middle">75%</text>
+<line class="grelha" x1="644.0" y1="124" x2="644.0" y2="548"/>
+<text class="eixo" x="644.0" y="566" text-anchor="middle">100%</text>
+<text class="nome" x="164" y="146.0" text-anchor="end">AMALIA-9B-SFT</text>
+<path class="barra" d="M174,134.0 H505.58 Q509.58,134.0 509.58,138.0 V146.0 Q509.58,150.0 505.58,150.0 H174 Z"/>
+<text class="valor" x="515.5799999999999" y="146.0">71.4%</text>
+<text class="nome" x="164" y="174.0" text-anchor="end">AMALIA-9B-DPO</text>
+<path class="barra" d="M174,162.0 H485.37 Q489.37,162.0 489.37,166.0 V174.0 Q489.37,178.0 485.37,178.0 H174 Z"/>
+<text class="valor" x="495.37" y="174.0">67.1%</text>
+<text class="nome" x="164" y="202.0" text-anchor="end">EuroLLM-9B</text>
+<path class="barra" d="M174,190.0 H445.41999999999996 Q449.41999999999996,190.0 449.41999999999996,194.0 V202.0 Q449.41999999999996,206.0 445.41999999999996,206.0 H174 Z"/>
+<text class="valor" x="455.41999999999996" y="202.0">58.6%</text>
+<text class="nome nosso" x="164" y="230.0" text-anchor="end">PequeninaLM-50M</text>
+<path class="barra nosso" d="M174,218.0 H405.0 Q409.0,218.0 409.0,222.0 V230.0 Q409.0,234.0 405.0,234.0 H174 Z"/>
+<text class="valor nosso" x="415.0" y="230.0">50.0%</text>
+<text class="nome" x="164" y="258.0" text-anchor="end">Salamandra-7B</text>
+<path class="barra" d="M174,246.0 H378.21000000000004 Q382.21000000000004,246.0 382.21000000000004,250.0 V258.0 Q382.21000000000004,262.0 378.21000000000004,262.0 H174 Z"/>
+<text class="valor" x="388.21000000000004" y="258.0">44.3%</text>
+<text class="nome" x="164" y="286.0" text-anchor="end">Apertus-8B</text>
+<path class="barra" d="M174,274.0 H358.0 Q362.0,274.0 362.0,278.0 V286.0 Q362.0,290.0 358.0,290.0 H174 Z"/>
+<text class="valor" x="368.0" y="286.0">40.0%</text>
+<text class="nome" x="164" y="314.0" text-anchor="end">Qwen 2.5-7B</text>
+<path class="barra" d="M174,302.0 H358.0 Q362.0,302.0 362.0,306.0 V314.0 Q362.0,318.0 358.0,318.0 H174 Z"/>
+<text class="valor" x="368.0" y="314.0">40.0%</text>
+<text class="nome" x="164" y="342.0" text-anchor="end">Ministral-8B</text>
+<path class="barra" d="M174,330.0 H358.0 Q362.0,330.0 362.0,334.0 V342.0 Q362.0,346.0 358.0,346.0 H174 Z"/>
+<text class="valor" x="368.0" y="342.0">40.0%</text>
+<text class="nome" x="164" y="370.0" text-anchor="end">Llama 3.1-8B</text>
+<path class="barra" d="M174,358.0 H351.42 Q355.42,358.0 355.42,362.0 V370.0 Q355.42,374.0 351.42,374.0 H174 Z"/>
+<text class="valor" x="361.42" y="370.0">38.6%</text>
+<text class="nome" x="164" y="398.0" text-anchor="end">Gemma 2-9B</text>
+<path class="barra" d="M174,386.0 H331.21000000000004 Q335.21000000000004,386.0 335.21000000000004,390.0 V398.0 Q335.21000000000004,402.0 331.21000000000004,402.0 H174 Z"/>
+<text class="valor" x="341.21000000000004" y="398.0">34.3%</text>
+<text class="nome" x="164" y="426.0" text-anchor="end">Mistral-7B</text>
+<path class="barra" d="M174,414.0 H331.21000000000004 Q335.21000000000004,414.0 335.21000000000004,418.0 V426.0 Q335.21000000000004,430.0 331.21000000000004,430.0 H174 Z"/>
+<text class="valor" x="341.21000000000004" y="426.0">34.3%</text>
+<text class="nome" x="164" y="454.0" text-anchor="end">OLMo 2-7B</text>
+<path class="barra" d="M174,442.0 H324.63 Q328.63,442.0 328.63,446.0 V454.0 Q328.63,458.0 324.63,458.0 H174 Z"/>
+<text class="valor" x="334.63" y="454.0">32.9%</text>
+<text class="nome" x="164" y="482.0" text-anchor="end">Gervasio-8B</text>
+<path class="barra" d="M174,470.0 H311.0 Q315.0,470.0 315.0,474.0 V482.0 Q315.0,486.0 311.0,486.0 H174 Z"/>
+<text class="valor" x="321.0" y="482.0">30.0%</text>
+<text class="nome" x="164" y="510.0" text-anchor="end">Qwen 3-8B</text>
+<path class="barra" d="M174,498.0 H304.41999999999996 Q308.41999999999996,498.0 308.41999999999996,502.0 V510.0 Q308.41999999999996,514.0 304.41999999999996,514.0 H174 Z"/>
+<text class="valor" x="314.41999999999996" y="510.0">28.6%</text>
+<text class="nome" x="164" y="538.0" text-anchor="end">Gemma 3-12B</text>
+<path class="barra" d="M174,526.0 H270.58 Q274.58,526.0 274.58,530.0 V538.0 Q274.58,542.0 270.58,542.0 H174 Z"/>
+<text class="valor" x="280.58" y="538.0">21.4%</text>
+</svg>
