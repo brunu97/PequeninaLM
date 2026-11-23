@@ -17,6 +17,7 @@
 
 <p align="center">
   <a href="https://huggingface.co/brunuu/PequeninaLM"><img src="https://img.shields.io/badge/🤗_Hugging_Face-brunuu%2FPequeninaLM-ffcc4d?style=for-the-badge" alt="Hugging Face"/></a>
+  <a href="https://huggingface.co/spaces/brunuu/PequeninaLM"><img src="https://img.shields.io/badge/🤗_Space-Experimentar_online-ff9d00?style=for-the-badge" alt="Space no Hugging Face"/></a>
 </p>
 
 <br/>
@@ -37,7 +38,9 @@ Aqui está o código para a treinar, os prompts usados para gerar as conversas e
 
 ## Experimentar
 
-Abre um dos ficheiros da pasta `gguf/` no LM Studio, ou corre no llama.cpp:
+A forma mais rápida é no [Space do Hugging Face](https://huggingface.co/spaces/brunuu/PequeninaLM), que corre no browser sem instalar nada.
+
+Para correr no teu computador, abre um dos ficheiros da pasta `gguf/` no LM Studio, ou corre no llama.cpp:
 
 ```bash
 llama-cli -m gguf/pequeninalm-f16.gguf
