@@ -8,16 +8,13 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/PT--PT-Portugal-006600?style=for-the-badge" alt="PT-PT"/>
   <img src="https://img.shields.io/badge/parâmetros-52M-1f6feb?style=for-the-badge" alt="52M parâmetros"/>
   <img src="https://img.shields.io/badge/contexto-1024-2da44e?style=for-the-badge" alt="contexto 1024"/>
   <img src="https://img.shields.io/badge/arquitetura-Llama-f08000?style=for-the-badge" alt="Llama"/>
-  <img src="https://img.shields.io/badge/licença-MIT-cc0000?style=for-the-badge" alt="MIT"/>
 </p>
 
 <p align="center">
   <a href="https://huggingface.co/brunuu/PequeninaLM"><img src="https://img.shields.io/badge/🤗_Hugging_Face-brunuu%2FPequeninaLM-ffcc4d?style=for-the-badge" alt="Hugging Face"/></a>
-  <a href="https://huggingface.co/spaces/brunuu/PequeninaLM"><img src="https://img.shields.io/badge/🤗_Space-Experimentar_online-ff9d00?style=for-the-badge" alt="Space no Hugging Face"/></a>
 </p>
 
 <br/>
